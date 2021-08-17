@@ -1,0 +1,62 @@
+{"intents": [
+
+    {"tag": "greeting",
+     "patterns": ["Hi", "Hi there", "Hello there", "Hey there", "Hey you", "Hey", "Is anyone there?", "Hello", "Hay", "Howdy", "What's up", "Wat up", "Good day"],
+     "responses": ["Hello", "Hi", "Hi there", "Hiya", "Hey there"]
+    },
+
+    {"tag": "goodbye",
+     "patterns": ["Bye", "Bye bye", "See you", "See ya", "See ya later", "See you later", "Be seeing you", "Catch you later", "Bye Hashy", "Goodbye Hashy", "Goodbye", "Goodby"],
+     "responses": ["See you later", "Have a nice day", "Bye! Come back again", "Bye bye!", "Bye!", "Have a good one"]
+    },
+
+    {"tag": "thanks",
+     "patterns": ["Thanks", "Thank you", "That's helpful", "Thanks for the help"],
+     "responses": ["Happy to help!", "Any time!", "My pleasure", "No problem!", "You're welcome!"]
+    },
+
+    {"tag": "success",
+     "patterns": ["That worked", "It worked", "That helped", "That's helpful"],
+     "responses": ["Good to hear", "Cool!", "Nice!", "Great!", "That's great!"]
+    },
+
+    {"tag": "about",
+     "patterns": ["Who are you?", "What are you?", "Who you are?", "What's this"],
+     "responses": ["I'm Hashy, your chatbot assistant", "I'm Hashy, an Artificial Intelligent bot", "My name's Hashy. I'm an virtual assistant powered by AI.", "You can call me Hashy, your chatbot assistant."]
+    },
+
+    {"tag": "name",
+     "patterns": ["what is your name", "what should I call you", "whats your name?", "do you have a name", "what do you want to be called", "what do you like to be called"],
+     "responses": ["You can call me Hashy.", "I'm Hashy!", "Just call me Hashy", "My name is Hashy"]
+    },
+
+    {"tag": "help",
+     "patterns": ["Could you help me?", "give me a hand please", "Can you help?", "What can you do for me?", "I need a support", "I need a help", "support me please"],
+     "responses": ["Tell me how I can assist you", "Tell me your problem so that I can assist you", "Sure thing! How can I support you?"]
+    },
+
+    {"tag": "assistance",
+     "patterns": ["I need assistance", "Can you assist me", "Could you assist me", "Could I have some assistance", "Please assist", "Please advise", "Assist me"],
+     "responses": ["What can I help you with?", "How can I help?", "What do you need help with?", "What do you need assistance with?", "Let me help"]
+    },
+
+    {"tag": "createaccount",
+     "patterns": ["I need to create a new account", "how to open a new account", "I want to create an account", "can you create an account for me", "how to open a new account"],
+     "responses": ["You can create a new account from the homepage of our website", "Just go to our website and follow the 'Sign Up' link to create a new account", "A new account can be created on our website. Just apply to get started."]
+    },
+
+    {"tag": "login",
+     "patterns": ["I need to login", "I need help logging in", "how to login", "how to log in", "help login", "Help log in", "help logging in", "I want to login", "can you login for me", "how do I login", "I can't login", "It won't let me login", "It won't let me log in"],
+     "responses": ["You can login to our website from the homepage of our website", "Just go to our website and follow the 'Sign In' link to login", "Access you account using the 'Sign In' button from the homepage."]
+    },
+
+    {"tag": "password",
+     "patterns": ["I need to reset my password", "reset password", "help me reset password", "reset my password", "can you reset my password", "forgot password", "I forgot my password", "forgot my password", "forgot the password to my account"],
+     "responses": ["To reset your password use the 'Forgot Password?' link on the Sign In page.", "We can send you a password reset link. Simply hit 'Forgot Password?' on the login page."]
+    },
+
+    {"tag": "complaint",
+     "patterns": ["I have a complaint", "I want to file a complaint", "I have a complaint about a service", "I would like to file a complaint", "I'm here to complain"],
+     "responses": ["Please provide us your complaint in order to assist you", "Please mention your complaint. We will reach out to you to remedy any inconvenience caused.", "What complaint would you liek to file. We're always trying to improve."]
+    }
+]}
