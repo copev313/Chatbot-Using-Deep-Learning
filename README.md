@@ -1,5 +1,5 @@
 # Chatbot-Using-Deep-Learning
- A chatbot that implements machine learning and natural language processing. We use Keras, Tensorflow and NLTK to recongize the user's intent and generate the appropriate response.
+ We use Keras, Tensorflow and NLTK to recognize the user's intent and generate the appropriate response.
 
 ## Getting Started
  Create a virtual environment and install the requirements:
