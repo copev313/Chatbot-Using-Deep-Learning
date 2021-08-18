@@ -10,7 +10,7 @@
      "responses": ["See you later", "Have a nice day", "Bye! Come back again", "Bye bye!", "Bye!", "Have a good one"]
     },
 
-    {"tag": "thanks",
+    {"tag": "thankyou",
      "patterns": ["Thanks", "Thank you", "That's helpful", "Thanks for the help"],
      "responses": ["Happy to help!", "Any time!", "My pleasure", "No problem!", "You're welcome!"]
     },
@@ -22,7 +22,10 @@
 
     {"tag": "about",
      "patterns": ["Who are you?", "What are you?", "Who you are?", "What's this"],
-     "responses": ["I'm Hashy, your chatbot assistant", "I'm Hashy, an Artificial Intelligent bot", "My name's Hashy. I'm an virtual assistant powered by AI.", "You can call me Hashy, your chatbot assistant."]
+     "responses": [ "I'm Hashy, your chatbot assistant",
+                    "I'm Hashy, an Artificial Intelligent bot",
+                    "My name's Hashy. I'm an virtual assistant powered by AI.",
+                    "You can call me Hashy, your chatbot assistant."]
     },
 
     {"tag": "name",
@@ -31,8 +34,14 @@
     },
 
     {"tag": "help",
-     "patterns": ["Could you help me?", "give me a hand please", "Can you help?", "What can you do for me?", "I need a support", "I need a help", "support me please"],
-     "responses": ["Tell me how I can assist you", "Tell me your problem so that I can assist you", "Sure thing! How can I support you?"]
+     "patterns": ["Could you help me?", "give me a hand please", "Can you help?", "What can you do for me?", "I need a support", "I need a help", "support me please", "help me", "please help",
+                    "I need some help", "help pls", "pls help me"],
+     "responses": [ "Tell me how I can assist you",
+                    "Tell me your problem so that I can assist you",
+                    "Sure thing! How can I support you?",
+                    "How can I help you?",
+                    "What can I assist you with?",
+                    "What do you need? I'm here to help!"]
     },
 
     {"tag": "assistance",
@@ -42,21 +51,57 @@
 
     {"tag": "createaccount",
      "patterns": ["I need to create a new account", "how to open a new account", "I want to create an account", "can you create an account for me", "how to open a new account"],
-     "responses": ["You can create a new account from the homepage of our website", "Just go to our website and follow the 'Sign Up' link to create a new account", "A new account can be created on our website. Just apply to get started."]
+     "responses": ["You can create a new account from the homepage of our website",
+                    "Just go to our website and follow the 'Sign Up' link to create a new account",
+                    "A new account can be created on our website. Just apply to get started."]
     },
 
     {"tag": "login",
-     "patterns": ["I need to login", "I need help logging in", "how to login", "how to log in", "help login", "Help log in", "help logging in", "I want to login", "can you login for me", "how do I login", "I can't login", "It won't let me login", "It won't let me log in"],
-     "responses": ["You can login to our website from the homepage of our website", "Just go to our website and follow the 'Sign In' link to login", "Access you account using the 'Sign In' button from the homepage."]
+     "patterns": ["I need to login", "I need help logging in", "how to login", "how to log in", "help login", "Help log in", "help logging in",
+                    "I want to login", "can you login for me", "how do I login", "I can't login", "It won't let me login", "It won't let me log in"],
+     "responses": [ "You can login to our website from the homepage of our website",
+                    "Just go to our website and follow the 'Sign In' link to login",
+                    "Access you account using the 'Sign In' button from the homepage."]
     },
 
     {"tag": "password",
-     "patterns": ["I need to reset my password", "reset password", "help me reset password", "reset my password", "can you reset my password", "forgot password", "I forgot my password", "forgot my password", "forgot the password to my account"],
-     "responses": ["To reset your password use the 'Forgot Password?' link on the Sign In page.", "We can send you a password reset link. Simply hit 'Forgot Password?' on the login page."]
+     "patterns": ["I need to reset my password", "reset password", "help me reset password", "reset my password", "can you reset my password",
+                    "forgot password", "I forgot my password", "forgot my password", "forgot the password to my account",
+                    "how do I reset password"],
+     "responses": ["To reset your password use the 'Forgot Password?' link on the Sign In page.",
+                    "We can send you a password reset link. Simply hit 'Forgot Password?' on the login page."]
+    },
+
+    {"tag": "emailchange",
+     "patterns": ["I need to reset my email", "reset email", "help me reset email", "help me reset my email", "reset my email", "can you reset my email",
+                    "I forgot my email", "what email address did I sign up with?", "what is the email to my account?", "What's my account's email?",
+                    "How do I change my email", "change my email", "change email", "change the email address to my account", "change my email address"],
+     "responses": ["We can change your email. Just email us at: support@email.com.",
+                    "To make changes to your email you can email us at: support@email.com",
+                    "Any account information can be handled by our support team. Shoot us an email at: support@email.com.",
+                    "We'd be happy to help. Email us at support@email.com"]
+    },
+
+    {"tag": "emailsupport",
+        "patterns": ["what is your email?", "can I have your email", "what is your support email", "please provide support email", "support email", "I need your email", 
+                    "I need email", "I need your email address", "who should I email"],
+        "responses": ["We can offer you assistance at support@email.com",
+                        "Our support team would be happy to assist you. Shoot us an email at: support@email.com",
+                        "We can be contacted at support@email.com", "Contact us at: support@boutsy.com"]
+    },
+
+    {"tag": "payout",
+     "patterns": ["when do I get paid?", "When am I getting paid", "payout information", "I want to know about pay outs",
+                 "how do I get paid", "I want paid", "pay me", "how to payouts work?", "how do you pay me?", "how do your pay people",
+                 "how do they pay me", "I would like to know how I get paid"],
+     "responses": ["Vendors are paid at the end of each week to the payment method configured through bill.com. You will receive payment automatically once your account reaches a revenue of $250 or more. To request an early payout or for information regarding payments, please reach us at support@email.com."]
     },
 
     {"tag": "complaint",
      "patterns": ["I have a complaint", "I want to file a complaint", "I have a complaint about a service", "I would like to file a complaint", "I'm here to complain"],
-     "responses": ["Please provide us your complaint in order to assist you", "Please mention your complaint. We will reach out to you to remedy any inconvenience caused.", "What complaint would you liek to file. We're always trying to improve."]
+     "responses": ["Please provide us your complaint in order to assist you",
+                    "Please mention your complaint. We will reach out to you to remedy any inconvenience caused.",
+                    "What complaint would you like to file. We're always trying to improve.",
+                    "We're listening and we'll file your complaint with out customer experience team."]
     }
 ]}
