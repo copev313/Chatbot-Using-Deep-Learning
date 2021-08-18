@@ -5,6 +5,8 @@ import colorama
 import numpy as np
 from tensorflow import keras
 
+from database import add_interaction
+
 colorama.init()
 from colorama import Fore, Style
 
@@ -31,12 +33,18 @@ def chat():
 
     # Event loop:
     while True:
+        # Console out user's input
         print(Fore.GREEN + "You: ", Style.RESET_ALL, end="")
+        # Store 
         user_input = input()
 
         # Handle exit command:
         if (user_input.lower() in ['quit', 'exit', 'stop']):
-            print(Fore.LIGHTBLUE_EX + "Chatbot: Bye bye!" + Style.RESET_ALL)
+            # Add the interaction to the database:
+            add_interaction(user_input, 'Bye bye!')
+            # Console out the exit message:
+            print(Fore.LIGHTBLUE_EX + "Chatbot: " + Style.RESET_ALL,
+                  "Bye bye!")
             break
 
         response = model.predict(keras.preprocessing.sequence.pad_sequences(
@@ -48,8 +56,13 @@ def chat():
         
         for i in data['intents']:
             if (i['tag'] == tag):
-                print(Fore.LIGHTBLUE_EX + "Chatbot:" + Style.RESET_ALL ,
-                      np.random.choice(i['responses']))
+                # Pick a random response with the determined intent:
+                bot_response = np.random.choice(i['responses'])
+                # Add the interaction to the database:
+                add_interaction(user_input, bot_response)
+                # Console out the response:
+                print(Fore.LIGHTBLUE_EX + "Chatbot: " + Style.RESET_ALL,
+                      bot_response)
 
 
 # Our driver code:
